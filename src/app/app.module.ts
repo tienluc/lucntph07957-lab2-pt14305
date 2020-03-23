@@ -1,17 +1,40 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductComponent } from './product/product.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { SliderComponent } from './slider/slider.component';
+import { ProductManagerComponent } from './product-manager/product-manager.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { CategoryComponent } from './category/category.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductManagerComponent } from './product-manager/product-manager.component';
-import { SliderComponent } from './slider/slider.component';
-
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CategoryComponent, ProductListComponent, ProductManagerComponent, SliderComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    CategoryComponent,
+    ProductComponent,
+    ProductListComponent,
+    SliderComponent,
+    ProductManagerComponent,
+    AboutComponent,
+    ServiceComponent,
+    HomepageComponent,
+    NotFoundComponent,
+    AddProductComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
